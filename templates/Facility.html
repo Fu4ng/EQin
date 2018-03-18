@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+
+{% block title %}
+    易勤平台
+{% endblock %}
+{% block headmessage %}
+        <h3>设施列表</h3>
+{% endblock %}
+{% block content %}
+{% for faciliy in f_list %}
+    <p>
+    <a href="/faciliy/{{ faciliy.fid }}">{{ faciliy.fid }}</a>
+    </p>
+    {% endfor %}
+{% endblock %}
